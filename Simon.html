@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Simon Game</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .head{
+            height: auto;
+            min-height: 7vh;
+            width: 100%;
+            color:white;
+            text-align: center;
+            background-color: black;
+        }
+        .control{
+            min-height: 5vh;
+            height: auto;
+            background-color: rgb(53, 1, 69);
+        }
+        .btn{
+            height: 80%;
+            margin-left: 5px;
+        }
+        .arena{
+            height: 88vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+        }
+        .box{
+            margin: 10px;
+            height: 100px;
+            width: 100px;
+            border-radius: 10px;
+            font-size: xx-large;
+            border:2px solid black;
+        }
+        .maxscore{
+            margin-left: 10px;
+            color:gold;
+        }
+        #box1{
+            
+            background-color: red;
+        }
+        #box2{
+            background-color: blue;
+        }
+        #box3{
+            background-color: green;
+        }
+        #box4{
+            background-color: yellow;
+        }
+        @keyframes fade{
+            0%{
+                height: 100px;
+                width: 100px;
+                border: 2px solid black;
+            }
+            50%{
+                height: 105px;
+                width: 105px;
+                border: 4px solid black;
+            }
+            100%{
+                height: 100px;
+                width: 100px;
+                border: 2px solid black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <H1 id="head" class="head">LEVEL 1</H1>
+    <div class="control"><button id="start" class="btn">START</button><button id="reset" class="btn">RESET</button><span class="maxscore">MAX-SCORE <span id="maxscore">1</span></span></div>
+    <div id="arena" class="arena">
+        <button id="box1" class="box">A</button>
+        <button id="box2" class="box">B</button>
+        <button id="box3" class="box">C</button>
+        <button id="box4" class="box">D</button>
+    </div>
+</body>
+<script src="simon.js"></script>
+</html>
