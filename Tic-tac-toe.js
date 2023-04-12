@@ -135,7 +135,7 @@ move=function(e){
         p=1;
     }
     check();
-    if(m==9)
+    if(m==8)
     {
         result('n',0);
     }
